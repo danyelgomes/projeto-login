@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container">
+                <div id="imagem">
+                    <img src="imagens/pexels-david-underland-3523621 (1).jpg" alt="">
+                </div>
+                <div id="login">
+                    <h1>Login</h1>
+                    <p>Seja bem vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+                
+                    <form action="a.php" method="post">
+                        <label for="iuser"> <i class='bx bxs-user' style='color:#ffffff'></i>
+                            <input type="text" name="user" id="iuser" required placeholder="seu e-mail">
+                        </label>
+
+                        <label for="ipass"> <i class='bx bxs-lock'></i>
+                            <input type="password" name="pass" id="ipass" minlength="8" required placeholder="sua senha"></label>
+
+                        <input id="enviar" type="submit" value="Entrar">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
