@@ -27,13 +27,7 @@
                             </label>
                             <label for="ipass"> 
                                 <i class='bx bxs-lock'></i>
-                                <input type="password" name="pass" id="ipass" minlength="8" required placeholder="Sua senha" function="mostrarSenha()">
-                                <span class="material-symbols-outlined" id="eyeson" onclick="mostrarSenha()">
-                                    visibility
-                                    </span>
-                                    <span class="material-symbols-outlined" id="eyesoff" onclick="mostrarSenha()">
-                                        visibility_off
-                                        </span>
+                                <input type="password" name="pass" id="ipass" minlength="8" required placeholder="Sua senha">
                             </label>
 
                             <input id="enviar" type="submit" value="Entrar">
@@ -43,23 +37,6 @@
                 </div>
         </section>
     </main>
-    <script>
-        function mostrarSenha() {
-            var passwordInput = document.getElementById('ipass');
-            var eyesOn = document.getElementById('eyeson');
-            var eyesOff = document.getElementById('eyesoff');
-
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                eyesOn.style.display = 'block';
-                eyesOff.style.display = 'none';
-            } 
-            else {
-                passwordInput.type = 'password';
-                eyesOn.style.display = 'none';
-                eyesOff.style.display = 'block';
-            }
-        }
-    </script>
+    
 </body>
 </html>
