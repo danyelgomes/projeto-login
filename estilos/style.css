@@ -1,260 +1,123 @@
 @charset "UTF-8";
 
 /* 
-    Paleta de cores
-    Verde: #49a09d
-    Lilás: #5f2c82
-*/
+     Paleta de cores
+     Verde: #49a09d
+     Lilás: #5f2c82
+ */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-@media screen and (max-width: 767px) {
-    body {
+body {
+    font-family: 'Roboto', sans-serif;
     background-color: #5f2c82;
-    }
-}
-
-html {
-    background-image: linear-gradient(to bottom, #5f2c82, #49a09d);
+    width: 97vw;
     height: 100vh;
-}
-
-@media screen and (max-width: 767px) {
-    img, div#imagem {
-        width: 250px;
-        height: 200px;
-        border-radius: 20px 20px 0px 0px;
-    }
-    
-}
-@media screen and (min-width: 768px) {
-    img, div#imagem {
-        max-width: 375px;
-        height: 350px;
-        border-radius: 0px 20px 20px 0px;
-    }
-    
-}
-
-img {
-    height: 350px;
-    
-}
-section {
-    width: 100vw;
-    height: 100vh;
-}
-
-/* 767px mobile */
-
-@media screen and (max-width: 767px) {
-    div.container {
-        flex-direction: column;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-    }
-}
-@media screen and (min-width: 768px) {
-    div.container {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row-reverse;
-        width: 90vw;
-        margin: auto;
-    }
-}
-
-div.container {
-    height: 100vh;
-}
-
-@media screen and (max-width: 767px) {
-    div#login {
-        width: 250px;
-        height: 320px;
-        border-radius: 0px 0px 20px 20px;
-    }
-
-    h1 {
-        font-size: 1.5em;
-        padding-bottom: 10px;
-        padding-top: 0px;
-    }
-
-    p {
-        font-size: 0.8em;
-    }
-    
-}
-@media screen and (min-width: 768px) {
-    div#login {
-        max-width: 355px;
-        height: 350px;
-        border-radius: 20px 0px 0px 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-        padding-bottom: 20px;
-        padding-top: 10px;
-    }
-    
-    p {
-        font-size: 1em;
-        padding-bottom: 20px;
-    }
-}
-@media screen and (min-width: 1000px) {
-    div#login {
-        max-width: 655px;
-        height: 350px;
-        border-radius: 20px 0px 0px 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-        padding-bottom: 20px;
-        padding-top: 10px;
-    }
-    
-    p {
-        font-size: 1em;
-        padding-bottom: 20px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
 div#login {
-    background-color: white;
-    text-align: center;
-    padding: 10px;
-    
+    width: 250px;
+    height: 520px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-p {
+div#imagem {
+    width: 100%;
+    height: 30%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+div.login {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: justify;
+    padding: 10px 20px 20px 20px;
 }
 
-div#login label {
-    display: block;
-    background-color: #5f2c82;
-    margin-bottom: 5px;
-    border-radius: 10px;
+div.login h1 {
+    padding-bottom: 10px;
 }
 
-@media screen and (max-width: 767px) {
-    label {
-        padding: 5px;
-    }
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
-    input {
+label {
+    display: flex;
+    background-color: #8610d4;
+    width: 98%;
     padding: 10px;
-    width: 89%;
-    background-color: #7ed4d1f2;
+    margin-top: 10px;
     border-radius: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: 24px;
-    border: 1px transparent;
-    }
 }
-@media screen and (min-width: 768px) {
-    label {
-        padding: 5px;
-    }
 
-    input {
-    padding: 10px;
-    width: 89%;
-    background-color: #7ed4d1f2;
+input {
+    padding: 7px;
     border-radius: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: 37px;
-    border: 1px transparent;
-    }
+    border: none;
+    width: 98%;
 }
-@media screen and (min-width: 1000px) {
-    label {
-        padding: 5px;
-    }
 
-    input {
-    padding: 10px;
-    width: 89%;
-    background-color: #7ed4d1f2;
-    border-radius: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: 70px;
-    border: 1px transparent;
-    }
+input::placeholder {
+    color: rgb(0, 0, 0);
 }
 
 input#enviar {
-    display: block;
-    width: 99%;
+    background-color: #5f2c82;
+    color: white;
+    width: 90%;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+input#esqueci {
+    background-color: #5f2c82;
+    color: white;
+    width: 90%;
     padding: 15px;
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #1c7a78b5;
+    cursor: pointer;
+}
+input#enviar:hover, input#esqueci:hover {
+    background-color: #49a09d;
+}
+
+i {
+    margin: 5px 5px 0px 0px;
     color: white;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
 }
 
-input#esqueci {
-    display: block;
-    width: 99%;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffffffb5;
-    color: rgb(32, 95, 74);
-    border-radius: 5px;
-    border: 1px solid green;
-    cursor: pointer;
+label span {
+    color: white;
+    margin-top: 2px;
+    margin-left: 5px;
+    cursor: pointer; 
 }
 
-@media screen and (max-width: 767px) {
-    i {
-    padding: 0px;
-    margin: 4px 0px 0px -2px;
-    position: absolute;
-    font-size: 25px;
-    padding-bottom: 0px;
-    color: #fff;
-    }
-}
-@media screen and (min-width: 768px) {
-    i {
-    padding: 0px;
-    margin: 7px 0px 0px 6px;
-    position: absolute;
-    font-size: 20px;
-    padding-bottom: 0px;
-    color: #fff;
-    }
-}
-@media screen and (min-width: 1000px) {
-    i {
-    padding: 0px;
-    margin: 7px 0px 0px 23px;
-    position: absolute;
-    font-size: 20px;
-    padding-bottom: 0px;
-    color: #fff;
-    }
+#eyeson {
+    display: none;
 }

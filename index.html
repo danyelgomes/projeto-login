@@ -6,33 +6,60 @@
     <title>Login</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
     <main>
         <section>
-            <div class="container">
-                <div id="imagem">
-                    <img src="imagens/pexels-david-underland-3523621 (1).jpg" alt="">
-                </div>
                 <div id="login">
-                    <h1>Login</h1>
-                    <p>Seja bem vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                
-                    <form action="a.php" method="post">
-                        <label for="iuser"> <i class='bx bxs-user' style='color:#ffffff'></i>
-                            <input type="text" name="user" id="iuser" required placeholder="seu e-mail">
-                        </label>
+                    <div id="imagem">
+                        <img src="imagens/pexels-david-underland-3523621 (1).jpg" alt="">
+                    </div>
 
-                        <label for="ipass"> <i class='bx bxs-lock'></i>
-                            <input type="password" name="pass" id="ipass" minlength="8" required placeholder="sua senha"></label>
+                    <div class="login">
+                        <h1>Login</h1>
+                        <p>Seja bem vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+                        <form action="a.php" method="post">
+                            <label for="iuser"> 
+                                <i class='bx bxs-user' style='color:#ffffff'></i>
+                                <input type="text" name="user" id="iuser" required placeholder="Seu e-mail">
 
-                        <input id="enviar" type="submit" value="Entrar">
+                            </label>
+                            <label for="ipass"> 
+                                <i class='bx bxs-lock'></i>
+                                <input type="password" name="pass" id="ipass" minlength="8" required placeholder="Sua senha" function="mostrarSenha()">
+                                <span class="material-symbols-outlined" id="eyeson" onclick="mostrarSenha()">
+                                    visibility
+                                    </span>
+                                    <span class="material-symbols-outlined" id="eyesoff" onclick="mostrarSenha()">
+                                        visibility_off
+                                        </span>
+                            </label>
 
-                        <input id="esqueci" type="submit" value="Esqueci a senha">
-                    </form>
+                            <input id="enviar" type="submit" value="Entrar">
+                            <input id="esqueci" type="submit" value="Esqueci a senha">
+                        </form>
+                    </div>
                 </div>
-            </div>
         </section>
     </main>
+    <script>
+        function mostrarSenha() {
+            var passwordInput = document.getElementById('ipass');
+            var eyesOn = document.getElementById('eyeson');
+            var eyesOff = document.getElementById('eyesoff');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyesOn.style.display = 'block';
+                eyesOff.style.display = 'none';
+            } 
+            else {
+                passwordInput.type = 'password';
+                eyesOn.style.display = 'none';
+                eyesOff.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
