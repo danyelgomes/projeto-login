@@ -184,6 +184,22 @@ div#login label {
     border: 1px transparent;
     }
 }
+@media screen and (min-width: 1000px) {
+    label {
+        padding: 5px;
+    }
+
+    input {
+    padding: 10px;
+    width: 89%;
+    background-color: #7ed4d1f2;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 70px;
+    border: 1px transparent;
+    }
+}
 
 input#enviar {
     display: block;
@@ -226,6 +242,16 @@ input#esqueci {
     i {
     padding: 0px;
     margin: 7px 0px 0px 6px;
+    position: absolute;
+    font-size: 20px;
+    padding-bottom: 0px;
+    color: #fff;
+    }
+}
+@media screen and (min-width: 1000px) {
+    i {
+    padding: 0px;
+    margin: 7px 0px 0px 23px;
     position: absolute;
     font-size: 20px;
     padding-bottom: 0px;
