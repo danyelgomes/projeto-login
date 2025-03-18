@@ -15,14 +15,13 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #5f2c82;
-    width: 97vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-
-
 
 div#login {
     width: 250px;
@@ -30,6 +29,8 @@ div#login {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     overflow: hidden;
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
 }
 
 div#imagem {
