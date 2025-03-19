@@ -76,7 +76,7 @@ input {
     padding: 7px;
     border-radius: 10px;
     border: none;
-    width: 98%;
+    width: calc(100% -20px);
 }
 
 input::placeholder {
